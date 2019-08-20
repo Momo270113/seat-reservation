@@ -54,10 +54,13 @@
 	</div>
 
 <?php	
+	// Reception username
 	$login="";
 	if(isset($_GET['elemID'])) {
 		$id = $_GET['elemID'];
 	}
+	
+	// Change view reservetion icon
 	if(isset($_POST['login'])){
     	$login=htmlentities($_POST['login']);
     	$path_to_file = 'index.php';
