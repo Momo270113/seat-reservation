@@ -2,6 +2,7 @@ const closeModal = document.getElementById('close');
 const modal = document.getElementById('openModal');
 var elemID ="";
 
+// Check taken places and reservation function
 document.onclick = function(place) {
 	if (document.getElementById(place.target.id).classList.contains('place') == true) {
 		var placeNum = document.getElementById(place.target.id);
@@ -14,6 +15,7 @@ document.onclick = function(place) {
 	}
 }
 
+// Close modal window function
 window.onclick = function(event) {
 	if (event.target == modal || event.target == closeModal) {
 	modal.style.display = 'none';
@@ -21,6 +23,7 @@ window.onclick = function(event) {
 	}
 }
 
+// Check correctly username
 if (loginUser < 3 || loginUser === "" || loginUser === null) {
 	if (window.location != "http://localhost:82/seat_reservation/") {
 	modal.style.display = 'block';
